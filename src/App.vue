@@ -15,11 +15,16 @@
     <a href="https://drive.google.com/file/d/1brgRZH-6TIQJZ-PjdTEE4FPjWibr9Ted/view?usp=sharing" target="_blank"  @click="toggle">Resume</a>
   </div>
 </div>
-<router-view></router-view>
+<home>
+</home>
 </template>
 <script>
+import home from './components/home.vue';
 export default {
   name: 'App',
+  components: {
+    home: home,
+  },
    data(){
     return {
       isActive: false,
@@ -27,7 +32,8 @@ export default {
     }
 }, methods: {
   toggleclass(){
-this.isActive = !this.isActive;
+  this.isActive = !this.isActive;
+
   },
   toggleNav(){
       this.isNav=!this.isNav;
@@ -42,12 +48,14 @@ this.isActive = !this.isActive;
 </script>
 <style>
 /*for burger menu*/
-
+.hide{
+  overflow: hidden;
+}
 .menu{
     position:fixed;
     top:20px;
     right:20px;
-    z-index: 2;
+    z-index: 3;
 }
 .container {
   display: inline-block;
@@ -86,10 +94,10 @@ this.isActive = !this.isActive;
   height: 0;
   width: 100%;
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  z-index: 2; /* Sit on top */
   left: 0;
   top: 0;
-  background-color: rgba(32, 176, 179, 0.9); /* Black w/opacity */
+  background-color: rgba(28, 64, 208, 0.9); /* Black w/opacity */
   overflow-x: hidden; /* Disable horizontal scroll */
   transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
 }
