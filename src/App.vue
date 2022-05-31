@@ -15,17 +15,17 @@
     <a href="https://drive.google.com/file/d/1brgRZH-6TIQJZ-PjdTEE4FPjWibr9Ted/view?usp=sharing" target="_blank"  @click="toggle">Resume</a>
   </div>
 </div>
-<home>
-</home>
+<router-view></router-view>
 </template>
 <script>
-import home from './components/home.vue';
+import home from './components/HOME.vue'
 export default {
   name: 'App',
   components: {
-    home: home,
+    home: home
   },
    data(){
+     
     return {
       isActive: false,
       isNav: false,
@@ -66,7 +66,7 @@ export default {
 .bar1, .bar2, .bar3 {
   width: 35px;
   height: 5px;
-  background-color: #333;
+  background-color: rgb(0, 0, 0);
   margin: 6px 0;
   transition: 0.5s;
 }
@@ -97,7 +97,7 @@ export default {
   z-index: 2; /* Sit on top */
   left: 0;
   top: 0;
-  background-color: rgba(28, 64, 208, 0.9); /* Black w/opacity */
+  background-color: rgba(28, 64, 208, 0.99); /* Black w/opacity */
   overflow-x: hidden; /* Disable horizontal scroll */
   transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
 }

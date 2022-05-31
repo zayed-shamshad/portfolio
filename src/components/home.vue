@@ -49,6 +49,7 @@ export default {
   goto(refName) {
       var element = this.$refs[refName];
       var top = element.offsetTop;
+     
       window.scrollTo(0, top);
     }
 }
@@ -107,7 +108,6 @@ export default {
 <footer id="footer">
     <div class="footer-text">
          <div class="name">
-           <fa :icon="['fa','user']" />
             MOHAMMAD ZAID SHAMSHAD
          </div>
     </div>
@@ -148,10 +148,10 @@ export default {
     width:100%;
     height:30px;
     border:none;
-    color:white;
+    color:rgb(0, 0, 0);
     border-radius: 10px;
     transition: all 0.3s ease-in-out;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
     outline:none;
     margin:10px;
     border-bottom:0px solid rgb(0, 0, 0);
@@ -159,7 +159,6 @@ export default {
 .form-field input:focus{
    border-bottom: 5px solid rgb(28, 64, 208);;
 }
-
 .form-field button::before{
     content:"";
     width:0px;
@@ -169,7 +168,7 @@ export default {
     bottom:0;
     right:0;
     position: absolute;
-    border-radius: 5px;
+   
     transition: all 0.3s ease-in-out;
     background-color: rgb(43, 43, 207);
     opacity:0;
@@ -182,7 +181,7 @@ export default {
     height:50px;
     color:white;
     background-color: transparent;
-    border:5px solid rgb(43, 43, 207);
+    border:4px solid rgb(43, 43, 207);
     border-radius: 5px;
     margin:10px;
     overflow: hidden;
@@ -194,11 +193,11 @@ export default {
 }
 .form-field textarea{
     padding: 10px;
-    color:white;
+    color:rgb(0, 0, 0);
     border-radius: 5px;
     width:100%;
     border:none;
-    background-color: #000;
+    background-color: rgb(255, 255, 255);
     outline:none;
     height: 100px;
     resize: vertical;
@@ -252,7 +251,7 @@ export default {
     font-size:2rem;
     display: flex;
     flex-direction: column;
-    color:rgb(0, 0, 0);
+    color:rgb(43, 43, 207);
     width:50px;
     height:100px;
     background-color: rgb(255, 255, 255);
@@ -269,7 +268,7 @@ export default {
     font-size:2rem;
     display: flex;
     flex-direction: column;
-    color:rgb(0, 0, 0);
+    color:rgb(43, 43, 207);
     width:50px;
     height:100px;
     background-color: rgb(255, 255, 255);
@@ -286,7 +285,7 @@ export default {
     font-size:2rem;
     display: flex;
     flex-direction: column;
-    color:rgb(0, 0, 0);
+    color:rgb(43, 43, 207);
     width:50px;
     width:50px;
     height:100px;
@@ -300,10 +299,10 @@ export default {
   transform: translateY(0%);
 }
 .twitter{
-        font-size:2rem;
-display: flex;
-flex-direction: column;
-color:rgb(0, 0, 0);
+   font-size:2rem;
+   display: flex;
+   flex-direction: column;
+   color:rgb(43, 43, 207);
    width:50px;
    height:100px;
    background-color: rgb(255, 255, 255);
@@ -329,7 +328,7 @@ color:rgb(0, 0, 0);
 
 }
 .contact{
-    background-color: #514f4f;
+    background-color: #000000;
     height: 100vh;
     width:100%;
     display:flex;
@@ -372,8 +371,8 @@ color:rgb(0, 0, 0);
   width: 100%;
   height:35px;
   padding:15px;
-  background-color: rgba(251, 251, 251, 0.7);
-  color:rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
+  color:rgb(0, 0, 0);
   font-size:20px;
   font-weight:bold;
   font-family: 'Roboto', sans-serif;
@@ -429,7 +428,7 @@ justify-content: center;
 }
 
 .outer-about{
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(28, 64, 208);
     overflow: hidden;
     height:300vh;
     display:flex;
