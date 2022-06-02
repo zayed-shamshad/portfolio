@@ -9,10 +9,8 @@ const IMAGE_URL = 'https://homepages.cae.wisc.edu/~ece533/images/airplane.png';
 hook.setUsername('Discord Webhook Node Name');
 hook.setAvatar(IMAGE_URL);
 app.use(bodyParser.json());
-
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
-
 app.get('/', (req, res) => {
   res.send(`Hi! Server is listening on port ${port}`)
 });

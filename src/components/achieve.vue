@@ -2,16 +2,14 @@
 <div class="outer-about">
     <div class="second-home" >
         <div class="textbox">
-        My Work
+       My Achievements
         </div>
-        
     </div>
 </div>
 </template>
 <script>
- 
 export default {
-  name: 'projects',
+  name: 'achieve',
   mounted(){
       this.observer();
   },

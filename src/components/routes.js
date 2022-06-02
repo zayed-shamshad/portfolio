@@ -1,14 +1,13 @@
-import { createWebHistory, createRouter } from "vue-router";
+import {  createRouter, createWebHashHistory } from "vue-router";
 import about from './about.vue';
 import projects from './projects.vue';
-import home from './home.vue';
+import home from './HOME.vue';
 import movie from './movie.vue';
 
 const routes = [
-   
     {
         path: "/",
-        name: "home",
+        name: "HOME",
         component: home,
     },
   {
@@ -28,8 +27,12 @@ const routes = [
   },
   
 ];
+
 const router = createRouter({
-  history: createWebHistory(),
+  scrollBehavior() {
+    return { x: 0, y: 0 };
+  },
+  history: createWebHashHistory(),
   routes,
 });
 export default router;
