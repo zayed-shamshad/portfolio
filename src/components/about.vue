@@ -54,19 +54,11 @@ export default {
     flex-direction: column;
     justify-content: space-evenly;
 }
-/*.emptybox{
-    width:100vw;
-    height:20vh;
-    background-color:rgb(255, 255, 255);
-}*/
+
 .second-home{
     margin-top:10vh;
     height:75vh;
     background-color:black ;
-    /*background-image: linear-gradient(to right, rgb(170, 102, 202),rgb(82, 136, 243), rgb(255, 234, 72));
-    animation:change-bg 4s infinite alternate;
-    background-position: left;
-    background-size: 300%;*/
     width: 100%;
     display:flex;
     justify-content: center;

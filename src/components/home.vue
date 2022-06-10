@@ -2,15 +2,15 @@
 export default {
   name: 'home',
 
-  methods:{
-     /* onMousemove(e) {
-      this.x = e.clientX;
-      document.getElementById('one').style.backgroundColor= 'hsl('+this.x+', 100%, 50%)';
-      document.getElementById('two').style.backgroundColor= 'hsl('+this.x+', 100%, 50%)';
-      document.getElementById('three').style.backgroundColor= 'hsl('+this.x+', 100%, 50%)';
+//   methods:{
+//      /* onMousemove(e) {
+//       this.x = e.clientX;
+//       document.getElementById('one').style.backgroundColor= 'hsl('+this.x+', 100%, 50%)';
+//       document.getElementById('two').style.backgroundColor= 'hsl('+this.x+', 100%, 50%)';
+//       document.getElementById('three').style.backgroundColor= 'hsl('+this.x+', 100%, 50%)';
      
-    },*/
-}
+//     },*/
+// }
 }
 </script>
 <template>
