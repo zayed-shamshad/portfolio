@@ -98,7 +98,6 @@ goto(refName) {
     },
   toggleclass(){
   this.isActive = !this.isActive;
-
   },
   toggleNav(){
       this.isNav=!this.isNav;
@@ -113,90 +112,92 @@ goto(refName) {
 }
 </script>
 <template>
-<div id="gototop" @click="goto('home')">
-    <fa :icon="['fa','angles-up']"/>
-</div>
-<div class="menu">
- <div class="container" @click="toggle" :class="{change: isActive}" >
-  <div class="bar1"></div>
-  <div class="bar2"></div>
-  <div class="bar3"></div>
-</div>
-</div>
-<div id="myNav" class="overlay" v-bind:style='{"height" : (isNav? "100%" : "0" )}'>
-  <div class="overlay-content">
-    <a @click="toggle();goto('home')" >Home</a>
-    <a @click="toggle();goto('about')">About</a>
-    <a @click="toggle();goto('projects')">Projects</a>
-    <a @click="toggle();goto('achieve')">Achievements</a>
-    <a @click="toggle();goto('contact')">Contact</a>
-    <a href="https://drive.google.com/file/d/1brgRZH-6TIQJZ-PjdTEE4FPjWibr9Ted/view?usp=sharing" target="_blank"  @click="toggle">Resume</a>
+  <div id="gototop" @click="goto('home')">
+    <fa :icon="['fa','angles-up']" />
   </div>
-</div>
-<div id="pseudoNav">
-  <div id="portfoliotext" @click="goto('home')" v-bind:style='{"cursor":"pointer"}'>
-    Portfolio
+  <div class="menu">
+    <div class="container" @click="toggle" :class="{change: isActive}">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
   </div>
-  <div id="navigation">
-  <ul>
-    <li><a href="#home" @click="goto('home')">Home</a></li>
-    <li><a href="#about" @click="goto('about')">About</a></li>
-    <li><a href="#projects" @click="goto('projects')">Projects</a></li>
-    <li><a href="#achievements" @click="goto('achieve')">Achievements</a></li>
-    <li><a href="#contact" @click="goto('contact')">Contact</a></li>
-  </ul>
+  <div id="myNav" class="overlay" v-bind:style='{"height" : (isNav? "100%" : "0" )}'>
+    <div class="overlay-content">
+      <a @click="toggle();goto('home')">Home</a>
+      <a @click="toggle();goto('about')">About</a>
+      <a @click="toggle();goto('projects')">Projects</a>
+      <a @click="toggle();goto('achieve')">Achievements</a>
+      <a @click="toggle();goto('contact')">Contact</a>
+      <a href="https://drive.google.com/file/d/1brgRZH-6TIQJZ-PjdTEE4FPjWibr9Ted/view?usp=sharing" target="_blank"
+        @click="toggle">Resume</a>
+    </div>
   </div>
-</div>
-<home class="section" id='home'/>
-<about class="section" id='about'/>
-<projects class="section" id='projects'/>
-<achieve class="section" id='achieve'/>
-<contact class="section" id='contact'/>
-<div class="car">
-  <h1>My Skills</h1>
-  <div class="logos">
-     <img src="https://cdn.svgporn.com/logos/css-3.svg">
-     <img src="https://cdn.svgporn.com/logos/vue.svg">
-     <img src="https://cdn.svgporn.com/logos/html-5.svg">
-     <img src="https://cdn.svgporn.com/logos/javascript.svg">
-     <img src="https://cdn.svgporn.com/logos/firebase.svg">
-     <img src="https://cdn.svgporn.com/logos/git.svg">
-     <img src="https://cdn.svgporn.com/logos/mongodb.svg">
-     <img src="https://cdn.svgporn.com/logos/nodejs.svg">
-     <img src="https://cdn.svgporn.com/logos/express.svg">
-     <img src="https://cdn.svgporn.com/logos/flutter.svg">
-     <img src="https://cdn.svgporn.com/logos/postman.svg">
-     <img src="https://cdn.svgporn.com/logos/flask.svg">
-     <img src="https://cdn.svgporn.com/logos/heroku.svg">
-     <img src="https://cdn.svgporn.com/logos/github.svg">
-     </div>
+  <div id="pseudoNav">
+    <div id="portfoliotext" @click="goto('home')" v-bind:style='{"cursor":"pointer"}'>
+      Portfolio
+    </div>
+    <div id="navigation">
+      <ul>
+        <li><a href="#home" @click="goto('home')">Home</a></li>
+        <li><a href="#about" @click="goto('about')">About</a></li>
+        <li><a href="#projects" @click="goto('projects')">Projects</a></li>
+        <li><a href="#achieve" @click="goto('achieve')">Achievements</a></li>
+        <li><a href="#contact" @click="goto('contact')">Contact</a></li>
+      </ul>
+    </div>
   </div>
-<footer id="footer">
+  <home class="section" id='home' />
+  <about class="section" id='about' />
+  <projects class="section" id='projects' />
+  <achieve class="section" id='achieve' />
+  <contact class="section" id='contact' />
+  <div class="car">
+    <h1>My Skills</h1>
+    <div class="logos">
+      <img src="https://cdn.svgporn.com/logos/css-3.svg">
+      <img src="https://cdn.svgporn.com/logos/vue.svg">
+      <img src="https://cdn.svgporn.com/logos/html-5.svg">
+      <img src="https://cdn.svgporn.com/logos/javascript.svg">
+      <img src="https://cdn.svgporn.com/logos/firebase.svg">
+      <img src="https://cdn.svgporn.com/logos/git.svg">
+      <img src="https://cdn.svgporn.com/logos/mongodb.svg">
+      <img src="https://cdn.svgporn.com/logos/nodejs.svg">
+      <img src="https://cdn.svgporn.com/logos/express.svg">
+      <img src="https://cdn.svgporn.com/logos/flutter.svg">
+      <img src="https://cdn.svgporn.com/logos/postman.svg">
+      <img src="https://cdn.svgporn.com/logos/flask.svg">
+      <img src="https://cdn.svgporn.com/logos/heroku.svg">
+      <img src="https://cdn.svgporn.com/logos/github.svg">
+    </div>
+  </div>
+  <footer id="footer">
     <div class="footer-text">
-         <div class="name">
-           <VueWriter
-          :array='["Created By Mohammad Zaid Shamshad | 2022 All rights reserved.©"]'
-           />
-         </div>
+      <div class="name-foot">
+        <VueWriter :array='["Created By Mohammad Zaid Shamshad | 2022 All rights reserved.©"]' :typeSpeed="30"
+          :eraseSpeed="30" :delay="3000" />
+      </div>
     </div>
     <div class="social-media">
-    <div class="facebook">
-    <fa :icon="['fab','linkedin']"/>
+      <div class="facebook">
+        <fa :icon="['fab','linkedin']" />
+      </div>
+      <div class="instagram">
+        <fa :icon="['fab','instagram']" />
+      </div>
+      <div class="twitter">
+        <fa :icon="['fab','twitter']" />
+      </div>
+      <div class="github">
+        <fa :icon="['fab','github']" />
+      </div>
     </div>
-    <div class="instagram">
-         <fa :icon="['fab','instagram']"/>
-    </div>
-    <div class="twitter">
-         <fa :icon="['fab','twitter']"/>
-    </div>
-     <div class="github">
-    <fa :icon="['fab','github']"/>
-    </div>
-    </div>
-</footer>
+  </footer>
 
 </template>
 <style>
+
+
 
 
 
@@ -423,14 +424,16 @@ html{
   }
   
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 450px) {
   .car {
      font-size:13px;
+   
+          height: 35vh;
   
     }
-    .name{
-      font-size:15px;
-    }
+     .name-foot {
+       font-size: 15px;
+     }
     .logos img {
       width: 30px;
       padding: 10px;
@@ -451,7 +454,7 @@ html{
                 }
                 .contact-card iframe{
                   width:85vw;
-                  
+
                 }
 
 }

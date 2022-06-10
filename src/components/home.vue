@@ -15,36 +15,27 @@ export default {
 </script>
 <template>
 
-<div class="outer-home">
-  
-<div class="home">
-      <div class="hometext">
-    Hello ! I am Zaid
+    <div class="outer-home">
 
+        <div class="home">
+            <div class="hometext">
+            <h4> Hello ! I am Zaid</h4>,<span :style="{'font-size':'19px'}"> A tech enthusiast, a web developer, flutter developer
+               and a designer. I develop websites and web
+                applications & mobile apps. I am a self-taught developer with a passion for learning and problem solving.</span>
+            </div>
+
+            <div @mousemove="onMousemove" class="home-div" id="one">
+            </div>
+            <div @mousemove="onMousemove" class="home-div" id="two">
+            </div>
+            <div @mousemove="onMousemove" class="home-div" id="three">
+            </div>
+        </div>
     </div>
-    <div @mousemove="onMousemove" class="home-div" id="one">
-    </div>
-    <div @mousemove="onMousemove" class="home-div" id="two">
-    </div>
-    <div @mousemove="onMousemove" class="home-div" id="three">
-    </div>
-</div>
-</div>
 </template>
 
 <style>
 
-
-
-.hometext{
-    top:50%;
-    position: absolute;
-    display: flex;
-    color:#f3ca20;
-    font-size:3rem;
-    font-family:'Source Code Pro',monospace;
-    z-index: 1;
-}
 .body{
     margin:0;
     padding:0;
@@ -53,7 +44,9 @@ export default {
     margin:0;
     padding:0;
 }
-
+.name-foot {
+    font-size: 18px;
+}
 .name,.emailid,.mobile{
     font-size:1.3rem;
     font-family: 'Source Code Pro', monospace;
@@ -63,7 +56,7 @@ export default {
     height:15vh;
     width: 100vw;
     color:rgb(0, 0, 0);
-    font-size:1rem;
+    font-size:0.7rem;
     text-align:center;
     display:flex;
     flex-direction:row;
@@ -187,11 +180,10 @@ padding-top:15vh;
 margin:0;
 justify-content: center;
 }
-.home div{
-    width:32.33%;
-    transition: 0.3s background-color ease;
-}
+
 #one{
+    width: 32.33%;
+        transition: 0.3s background-color ease;
     background-color: black;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -203,6 +195,8 @@ justify-content: center;
     animation-fill-mode: forwards;
 }
 #two{
+    width: 32.33%;
+        transition: 0.3s background-color ease;
     background-color:black;
     transform:translateY(100%);
     animation:slideup 1.5s ease-in-out;
@@ -212,6 +206,8 @@ justify-content: center;
 }
 
 #three{
+    width: 32.33%;
+        transition: 0.3s background-color ease;
     background-color:black;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -222,12 +218,49 @@ justify-content: center;
     animation-fill-mode: forwards;
     
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 450px) {
+    #footer{
+        height:10vh;
+    }
+        .footer-text {
+           height:5vh;
+        }
+    .social-media{
+        height: 5vh;
+    }
     .footer-text {
         font-size: 0.7rem;
     }
+    .instagram, .facebook,.github,.twitter{
+       transform:translate(0,40%);
+       font-size: 1.7rem;
+    }
+        .instagram:hover,
+        .facebook:hover,
+        .github:hover,
+        .twitter:hover {
+            transform: translate(0, 35%);
+        }
+       
     
 
 }
-
+.hometext {
+    width:90vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 2.5rem;
+    height: 200px;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    color: #f3ca20;
+    font-family: 'Source Code Pro', monospace;
+    z-index: 1;
+    line-height: 35px;
+}
 </style>
