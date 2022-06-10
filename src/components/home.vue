@@ -20,6 +20,7 @@ export default {
 <div class="home">
       <div class="hometext">
     Hello ! I am Zaid
+
     </div>
     <div @mousemove="onMousemove" class="home-div" id="one">
     </div>
@@ -32,6 +33,9 @@ export default {
 </template>
 
 <style>
+
+
+
 .hometext{
     top:50%;
     position: absolute;
@@ -90,15 +94,12 @@ export default {
     width:20vw;
 }
 .facebook{
-  
     font-size:2.4rem;
     display: flex;
     flex-direction: column;
     color:#f3ca20;
     width:80px;
-      width:5vw;
     height:100px;
-
     background-color: black;
     padding:5px;
     bottom: 0;
@@ -106,15 +107,15 @@ export default {
     transform: translateY(50%);
 }
 .facebook:hover{
-   
+    font-size: 3rem;
   transform: translateY(5%);
-  font-size:3rem;
+ 
 }
 .github{
     font-size:2.4rem;
     display: flex;
     flex-direction: column;
-     color:#f3ca20;
+    color:#f3ca20;
     width:80px;
     height:100px;
     background-color: black;
@@ -221,6 +222,12 @@ justify-content: center;
     animation-fill-mode: forwards;
     
 }
+@media screen and (max-width: 750px) {
+    .footer-text {
+        font-size: 0.7rem;
+    }
+    
 
+}
 
 </style>

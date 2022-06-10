@@ -155,13 +155,13 @@ goto(refName) {
 <div class="car">
   <h1>My Skills</h1>
   <div class="logos">
-    <img src="https://cdn.svgporn.com/logos/css-3.svg">
+     <img src="https://cdn.svgporn.com/logos/css-3.svg">
      <img src="https://cdn.svgporn.com/logos/vue.svg">
      <img src="https://cdn.svgporn.com/logos/html-5.svg">
      <img src="https://cdn.svgporn.com/logos/javascript.svg">
      <img src="https://cdn.svgporn.com/logos/firebase.svg">
      <img src="https://cdn.svgporn.com/logos/git.svg">
-      <img src="https://cdn.svgporn.com/logos/mongodb.svg">
+     <img src="https://cdn.svgporn.com/logos/mongodb.svg">
      <img src="https://cdn.svgporn.com/logos/nodejs.svg">
      <img src="https://cdn.svgporn.com/logos/express.svg">
      <img src="https://cdn.svgporn.com/logos/flutter.svg">
@@ -196,8 +196,12 @@ goto(refName) {
 </footer>
 
 </template>
-
 <style>
+
+
+
+
+
 @import url('https://fonts.googleapis.com/css2?family=Exo+2&family=Roboto:wght@500&family=Zen+Old+Mincho&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Exo+2&family=Indie+Flower&family=Roboto:wght@500&family=Zen+Old+Mincho&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
@@ -205,7 +209,6 @@ goto(refName) {
  .menu{
     display:none;
   }
-
 }
 @media screen and (max-width: 850px) {
   #navigation{
@@ -213,30 +216,34 @@ goto(refName) {
   }
 }
 
+
 .car{
   height:50vh;
   width:100%;
   background-color:#f3ca20;
   display:flex;
   flex-direction:column;
-  justify-content:space-evenly;
+  justify-content:center;
   align-items:center;
+  align-content: center;
 
 }
 .car h1{
    font-family: 'Source Code Pro', monospace;
+   padding-bottom:40px;
 }
 .logos{
   display:flex;
   flex-direction:row;
   justify-content:center;
   align-items:center;
-  flex-wrap:wrap;
+  align-content: center;
+  flex-wrap: wrap;
 
 }
 .logos img{
   width:50px;
-   padding:20px;
+  padding:10px;
   height:50px;
 }
 
@@ -247,7 +254,7 @@ goto(refName) {
     position:fixed;
     bottom:20px;
     right:20px;
-    z-index:100;
+    z-index:1;
     cursor:pointer;
     color:#f3ca20;
     font-size:30px;
@@ -414,5 +421,40 @@ html{
     top: 15px;
     right: 35px;
   }
+  
 }
+@media screen and (max-width: 700px) {
+  .car {
+     font-size:13px;
+  
+    }
+    .name{
+      font-size:15px;
+    }
+    .logos img {
+      width: 30px;
+      padding: 10px;
+      height: 30px;
+    }
+    #gototop{
+      display:none;
+    }
+        .menu {
+          position: fixed;
+          top: 20px;
+          right: 7px;
+          z-index: 3;
+        }
+                .contact-card {
+                  width:90vw;
+                
+                }
+                .contact-card iframe{
+                  width:85vw;
+                  
+                }
+
+}
+  
+
 </style>

@@ -51,8 +51,6 @@ export default {
 
 <style>
 .contact-card{
-    
-    
     height:50vh;
     border:2px solid black;
     background-color: #f3ca20;
@@ -133,7 +131,7 @@ export default {
     border-radius: 5px;
     margin:10px;
     overflow: hidden;
-    z-index: 1;
+    z-index: 0;
     transition:0.4s;
     font-size: 1.4rem;
    font-family: "Source Code Pro", monospace;
