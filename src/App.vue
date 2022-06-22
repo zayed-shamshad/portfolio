@@ -38,7 +38,6 @@ mount(){
   },
  methods: {
  onscroll(){
-   console.log(window.scrollY);
     if(window.scrollY>=50){
         document.getElementById("pseudoNav").style.backgroundColor="black";
         document.getElementById("pseudoNav").style.height="50px";
@@ -93,8 +92,8 @@ goto(refName) {
     window.scrollTo({
       top: position,
       behavior: 'smooth',
-    });
-     this.$router.push({ name: this.$route.name, hash: refName })
+    });    
+  this.$router.push({name: this.$route.name, hash:`#${refName}`})
     },
   toggleclass(){
   this.isActive = !this.isActive;
@@ -139,11 +138,11 @@ goto(refName) {
     </div>
     <div id="navigation">
       <ul>
-        <li><a href="#home" @click="goto('home')">Home</a></li>
-        <li><a href="#about" @click="goto('about')">About</a></li>
-        <li><a href="#projects" @click="goto('projects')">Projects</a></li>
-        <li><a href="#achieve" @click="goto('achieve')">Achievements</a></li>
-        <li><a href="#contact" @click="goto('contact')">Contact</a></li>
+        <li><a @click="goto('home')">Home</a></li>
+        <li><a  @click="goto('about')">About</a></li>
+        <li><a  @click="goto('projects')">Projects</a></li>
+        <li><a  @click="goto('achieve')">Achievements</a></li>
+        <li><a  @click="goto('contact')">Contact</a></li>
       </ul>
     </div>
   </div>
@@ -196,11 +195,6 @@ goto(refName) {
 
 </template>
 <style>
-
-
-
-
-
 
 
 @import url('https://fonts.googleapis.com/css2?family=Exo+2&family=Roboto:wght@500&family=Zen+Old+Mincho&display=swap');
@@ -348,23 +342,23 @@ html{
 .bar1, .bar2, .bar3 {
   width: 35px;
   height: 5px;
-  background-color: rgb(0, 0, 0);
+  background-color:black;
   margin: 6px 0;
   transition: 0.5s;
 }
 
 .change .bar1 {
-  background-color:white;
+  background-color:#f3ca20;
   transform: rotate(-45deg) translate(-9px, 6px) ;
 }
 .change .bar2 {
   
- background-color:white;
+ background-color:#f3ca20;
     transform: translateX(3000%)
 }
 
 .change .bar3 {
-   background-color:white;
+   background-color:#f3ca20;
   transform: rotate(+45deg) translate(-8px, -8px);
 }
 

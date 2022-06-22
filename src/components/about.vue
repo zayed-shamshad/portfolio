@@ -4,11 +4,11 @@
             <div class="textbox">
                 <h4> About Me </h4>
                 <div class="abouttext">
-                    A tech enthusiast, a web developer,
+                    Hey! I'm a web developer,
                     flutter developer
-                    and a designer. I develop websites and web
+                    and a designer. I develop websites, web
                     applications & mobile apps. I am a self-taught developer with a passion for learning and problem
-                    solving
+                    solving.
                 </div>
             </div>
         </div>

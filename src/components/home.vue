@@ -46,8 +46,6 @@ export default {
         </div>
 
         <div class="home">
-
-
             <div @mousemove="onMousemove" class="home-div" id="one">
             </div>
             <div @mousemove="onMousemove" class="home-div" id="two">
@@ -69,8 +67,6 @@ export default {
     display: flex;
     align-items:center;
     height:50vh;
-
-    
 }
 .hometext a{
     background-color:#f3ca20;
@@ -105,7 +101,7 @@ export default {
 
 }
 .displaypic{
-    background:url('../assets/coder.jpg');
+    background:url('../assets/coderr.svg');
     width:300px;
     height:300px;
     background-size:cover;

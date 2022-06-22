@@ -4,23 +4,23 @@
       <div class="textbox">
         <h4> Projects</h4>
       </div>
-        <div class="projectcardbox">
-          <projectcard description="is a movie recommendation system" image="../assets/github.jpg"
-            title="movie-recommendation" link="https://zayed-shamshad.github.io/Movie-recommendation-system/">
-          </projectcard>
-          <projectcard description="is a personality system" image="../assets/github.jpg" title="movie-recommendation"
-            link="https://zayed-shamshad.github.io/Movie-recommendation-system/">
-          </projectcard>
-          <projectcard description="is chat app" image="../assets/github.jpg" title="movie-recommendation"
-            link="https://zayed-shamshad.github.io/Movie-recommendation-system/">
-          </projectcard>
-          <projectcard description="sorting visualiser" image="../assets/github.jpg" title="movie-recommendation"
-            link="https://zayed-shamshad.github.io/Movie-recommendation-system/">
-          </projectcard>
-        </div>
+      <div class="projectcardbox">
+        <projectcard description="A web app that recommends movies m and has the functionality to store the favpourite movies of the user" image="../assets/github.jpg"
+          title="movie-recommendation" link="https://zayed-shamshad.github.io/Movie-recommendation-system/">
+        </projectcard>
+        <projectcard description="is a personality system" image="../assets/github.jpg" title="movie-recommendation"
+          link="https://zayed-shamshad.github.io/personality-test/">
+        </projectcard>
+        <projectcard description="is chat app" image="../assets/github.jpg" title="movie-recommendation"
+          link="https://zayed-shamshad.github.io/Movie-recommendation-system/">
+        </projectcard>
+        <projectcard description="sorting visualiser" image="../assets/github.jpg" title="movie-recommendation"
+          link="https://zayed-shamshad.github.io/algo-visualizer/">
+        </projectcard>
       </div>
-
     </div>
+
+  </div>
 </template>
 <script>
 import projectcard from './projectcard.vue'

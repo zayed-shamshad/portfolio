@@ -1,5 +1,6 @@
 <template>
     <div class="projectcard">
+        <h4> {{title}}</h4>
 
         <div class="container-projectcard">
             <img src="../assets/github.jpg" alt="Avatar" class="image-projectcard">
@@ -51,7 +52,9 @@
             link_web: {
                 type: String,
                 required: true
-            }   
+            }
+            ,
+
         },
         data() {
             return {
@@ -61,6 +64,10 @@
     }
 </script>
 <style>
+
+
+
+
 
 
 
@@ -148,7 +155,14 @@
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    white-space: nowrap;
+    display:flex;
+    width: 280px;
+    height: 100%;
+    justify-content: center;
+    text-align:center;
+    align-items:center;
+    padding:4px;
+
 }
 .linkscard{
     display: flex;
@@ -168,13 +182,16 @@
     background-color: transparent;
     margin-right:5px;
 }
-.linkscard svg:hover {
-    box-shadow: 0px 0px 10px 5px #f3ca20;
-}
+
 
 .linkscard a{
     text-decoration: none;
     color:#f3ca20;
     font-family:"Source Code Pro",monospace;
+    padding:3px;
+    border-radius:5px;
+}
+.linkscard a:hover {
+    box-shadow: 0px 0px 10px 5px #f3ca20;
 }
 </style>
