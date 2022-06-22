@@ -1,6 +1,6 @@
 <template>
 <div class="outer-about">
-    <div class="second-home" >
+    <div class="second-home-achieve" >
         <div class="textbox">
        My Achievements
         </div>
@@ -15,7 +15,7 @@ export default {
   },
   methods:{
    observer(){
-           const cards=document.getElementsByClassName("second-home");
+           const cards=document.getElementsByClassName("second-home-achieve");
            const observer = new IntersectionObserver(entries => {
                 entries.forEach(entry => {
                     entry.target.classList.toggle("animation",entry.isIntersecting);
@@ -36,5 +36,6 @@ export default {
 
 
 <style>
+
 
 </style>

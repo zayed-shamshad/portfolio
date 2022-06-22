@@ -1,11 +1,18 @@
 <template>
-<div class="outer-about">
-    <div class="second-home" >
-        <div class="textbox">
-        About Me
+    <div class="outer-about">
+        <div class="second-home-about">
+            <div class="textbox">
+                <h4> About Me </h4>
+                <div class="abouttext">
+                    A tech enthusiast, a web developer,
+                    flutter developer
+                    and a designer. I develop websites and web
+                    applications & mobile apps. I am a self-taught developer with a passion for learning and problem
+                    solving
+                </div>
+            </div>
         </div>
     </div>
-</div>
 </template>
 <script>
 export default {
@@ -15,7 +22,7 @@ export default {
   },
   methods:{
    observer(){
-           const cards=document.getElementsByClassName("second-home");
+           const cards=document.getElementsByClassName("second-home-about");
            const observer = new IntersectionObserver(entries => {
                 entries.forEach(entry => {
                     entry.target.classList.toggle("animation",entry.isIntersecting);
@@ -36,6 +43,19 @@ export default {
 
 
 <style>
+
+
+
+.abouttext{
+    font-size: 1.8rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 2rem;
+    width:50vw;
+
+
+}
 .textbox{
    font-size: 3rem;
    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -55,18 +75,50 @@ export default {
     justify-content: space-evenly;
 }
 
-.second-home{
+.second-home-about{
     margin-top:10vh;
     height:75vh;
     background-color:black ;
     width: 100%;
     display:flex;
-    justify-content: center;
+    flex-direction: column;
+
+    justify-content: space-evenly;
     align-items: center;
     transition: 1s;
     opacity: 0;
     transform: translateY(-150px);
    
+
+}
+.second-home-achieve {
+    margin-top: 10vh;
+    height: 75vh;
+    background-color: black;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-evenly;
+    align-items: center;
+    transition: 1s;
+    opacity: 0;
+    transform: translateY(-150px);
+}
+.second-home {
+    margin-top: 10vh;
+    height: 95vh;
+    background-color: black;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-evenly;
+    align-items: center;
+    transition: 1s;
+    opacity: 0;
+    transform: translateY(-150px);
+
 
 }
 .animation{

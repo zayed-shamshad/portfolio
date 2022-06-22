@@ -16,13 +16,37 @@ export default {
 <template>
 
     <div class="outer-home">
+        <div class="homeoverlay">
+            <div class="hometext">
+                <h4> Hello ! I am Zaid</h4>
+               
+                    <a href="../assets/resume.pdf" download>
+                        Resume
+                    </a>
+              
+                <div class="social-media">
+                    <div class="facebook">
+                        <fa :icon="['fab','linkedin']" />
+                    </div>
+                    <div class="instagram">
+                        <fa :icon="['fab','instagram']" />
+                    </div>
+                    <div class="twitter">
+                        <fa :icon="['fab','twitter']" />
+                    </div>
+                    <div class="github">
+                        <fa :icon="['fab','github']" />
+                    </div>
+                </div>
+
+            </div>
+            <div class="displaypic">
+            </div>
+
+        </div>
 
         <div class="home">
-            <div class="hometext">
-            <h4> Hello ! I am Zaid</h4>,<span :style="{'font-size':'19px'}"> A tech enthusiast, a web developer, flutter developer
-               and a designer. I develop websites and web
-                applications & mobile apps. I am a self-taught developer with a passion for learning and problem solving.</span>
-            </div>
+
 
             <div @mousemove="onMousemove" class="home-div" id="one">
             </div>
@@ -35,7 +59,62 @@ export default {
 </template>
 
 <style>
+.hometext {
+    font-size:3rem;
+    color:#f3ca20;
+    font-family:'Source Code Pro',monospace;
+    text-align:center;
+    flex-direction:column;
+    justify-content:space-evenly;
+    display: flex;
+    align-items:center;
+    height:50vh;
 
+    
+}
+.hometext a{
+    background-color:#f3ca20;
+    color:black;
+    border:none;
+    padding:10px;
+    font-size:1.5rem;
+    font-family:'Source Code Pro',monospace;
+    border-radius:10px;
+    cursor:pointer;
+    margin-top:30px;
+    text-decoration: none;
+    transition:all 0.2s ease-in-out;
+}
+.hometext a:hover {
+    background-color: #c0a124;
+  
+}
+.homeoverlay{
+    position:absolute;
+    width:70vw;
+    height:70vh;
+    background-color:transparent;
+    left:50vw;
+    top:50vh;
+    transform: translate(-50%,-50%);
+    z-index:1;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-evenly;
+    align-items:center;
+
+}
+.displaypic{
+    background:url('../assets/coder.jpg');
+    width:300px;
+    height:300px;
+    background-size:cover;
+    font-weight: bold;
+    line-height:16px;
+    font-size:18px;
+    border-radius:50%;
+    z-index:2;
+}
 .body{
     margin:0;
     padding:0;
@@ -245,22 +324,5 @@ justify-content: center;
     
 
 }
-.hometext {
-    width:90vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-size: 2.5rem;
-    height: 200px;
-    top: 50%;
-    left:50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    color: #f3ca20;
-    font-family: 'Source Code Pro', monospace;
-    z-index: 1;
-    line-height: 35px;
-}
+
 </style>
