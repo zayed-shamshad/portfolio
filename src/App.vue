@@ -28,11 +28,11 @@ export default {
 created(){
     window.addEventListener('scroll',this.onscroll);
 },
-mount(){
+mounted(){
   window.onbeforeunload = () => {  
   window.scrollTo(0, 0);  
 };
-  this.observe();
+  this.observee();
 },unmounted() {
     window.removeEventListener("scroll", this.onscroll);
   },
@@ -65,27 +65,21 @@ mount(){
         document.getElementById("gototop").style.opacity="0";
     }
  },
-   observe(){
-      const options = {
-     
-      threshold: 0.5,
-    }
-           this.sectionObserver = new IntersectionObserver(this.sectionObserverHandler, options)
-  
-    // Observe each section
-    const sections = document.querySelectorAll('.section')
-    sections.forEach(section => {
-      this.sectionObserver.observe(section)
-    })
-  },
-  sectionObserverHandler (entries) {
-    for (const entry of entries) {
-      if (entry.isIntersecting) {
-         const sectionId = entry.target.id
-         // Push sectionId to router here 
-         this.$router.push({ name: this.$route.name, hash: `#${sectionId}` })
-      }
-    }
+   observee(){
+     const sectionObserver = new IntersectionObserver(entries=>{
+       entries.forEach(entry => {
+         if (entry.isIntersecting) {
+           const sectionId = entry.target.id
+           this.$router.replace({ name: this.$route.name, hash: `#${sectionId}` })
+         }
+       }
+       )
+     },{ threshold: 0.5});
+
+     const sections = document.getElementsByClassName('section');
+     for (var i = 0; i < sections.length; i++) {
+       sectionObserver.observe(sections[i])
+     }
    },
 goto(refName) {
     const position = document.getElementById(refName).offsetTop;
@@ -128,7 +122,7 @@ goto(refName) {
       <a @click="toggle();goto('projects')">Projects</a>
       <a @click="toggle();goto('achieve')">Achievements</a>
       <a @click="toggle();goto('contact')">Contact</a>
-      <a href="https://drive.google.com/file/d/1brgRZH-6TIQJZ-PjdTEE4FPjWibr9Ted/view?usp=sharing" target="_blank"
+      <a href="https://drive.google.com/file/d/1OTJwI9tUGDGtyKi0t6MPF3CwFISZFPJs/view" target="_blank"
         @click="toggle">Resume</a>
     </div>
   </div>
@@ -139,10 +133,10 @@ goto(refName) {
     <div id="navigation">
       <ul>
         <li><a @click="goto('home')">Home</a></li>
-        <li><a  @click="goto('about')">About</a></li>
-        <li><a  @click="goto('projects')">Projects</a></li>
-        <li><a  @click="goto('achieve')">Achievements</a></li>
-        <li><a  @click="goto('contact')">Contact</a></li>
+        <li><a @click="goto('about')">About</a></li>
+        <li><a @click="goto('projects')">Projects</a></li>
+        <li><a @click="goto('achieve')">Achievements</a></li>
+        <li><a @click="goto('contact')">Contact</a></li>
       </ul>
     </div>
   </div>
@@ -197,6 +191,8 @@ goto(refName) {
 <style>
 
 
+
+
 @import url('https://fonts.googleapis.com/css2?family=Exo+2&family=Roboto:wght@500&family=Zen+Old+Mincho&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Exo+2&family=Indie+Flower&family=Roboto:wght@500&family=Zen+Old+Mincho&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
@@ -213,7 +209,7 @@ goto(refName) {
 
 
 .car{
-  height:50vh;
+  height:30vh;
   width:100%;
   background-color:#f3ca20;
   display:flex;
@@ -409,6 +405,16 @@ html{
   font-size: 60px;
 }
 
+@media screen and (max-width: 700px) {
+  .textboxabout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+  }
+}
 @media screen and (max-height: 450px) {
   .overlay a {font-size: 20px}
   .overlay .closebtn {
@@ -419,6 +425,8 @@ html{
   
 }
 @media screen and (max-width: 450px) {
+  
+  
   .car {
      font-size:13px;
    

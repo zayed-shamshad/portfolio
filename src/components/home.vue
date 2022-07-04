@@ -14,16 +14,13 @@ export default {
 }
 </script>
 <template>
-
     <div class="outer-home">
         <div class="homeoverlay">
             <div class="hometext">
                 <h4> Hello ! I am Zaid</h4>
-               
-                    <a href="../assets/resume.pdf" download>
+                    <a href="../assets/Mohammad_Zaid_Shamshad_Resume__.pdf" download>
                         Resume
                     </a>
-              
                 <div class="social-media">
                     <div class="facebook">
                         <fa :icon="['fab','linkedin']" />

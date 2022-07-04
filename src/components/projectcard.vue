@@ -1,7 +1,6 @@
 <template>
     <div class="projectcard">
         <h4> {{title}}</h4>
-
         <div class="container-projectcard">
             <img src="../assets/github.jpg" alt="Avatar" class="image-projectcard">
             <div class="overlay-projectcard">
@@ -10,13 +9,11 @@
         </div>
         <div class="tags-projectcard">
             <ul>
-                <li>flask</li>
+                <li>{{tags1}}</li>
                 <li>javascript</li>
                 <li>css</li>
                 <li>html</li>
-                <li>vuejs</li>
-                <li>bootstrap</li>
-                <li>nodejs</li>
+                <li>{{tags2}}</li>
             </ul>
         </div>
         <div class="linkscard">
@@ -54,7 +51,15 @@
                 required: true
             }
             ,
-
+            tags1: {
+                type: String,
+                required: true
+            },
+            tags2: {
+                type: String,
+                required: true
+            }
+            ,
         },
         data() {
             return {
@@ -66,6 +71,12 @@
 <style>
 
 
+
+
+.projectcard h4{
+   color:#f3ca20;
+    font-family:'Source Code Pro',monospace;
+}
 
 
 
@@ -111,7 +122,7 @@
     align-items: center;
     width: 300px;
     height: 400px;
-    background-color: #f5f5f5;
+    background-color: #000000;
     border-radius: 10px;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
 }

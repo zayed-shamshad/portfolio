@@ -6,8 +6,7 @@
     <div class="contact-form">
         <div v-bind:style='{"border-bottom" :"2px solid yellow","font-family":"Source Code Pro, monospace"}'><h1>Contact Me</h1>
         </div>
-
-        <form action="" @submit.prevent="submit" @reset="onReset">
+        <form action="mailto:shamshad.1@iitj.ac.in" @submit.prevent="submit" @reset="onReset">
                 <div class="form-field">
                     <label for="name" v-bind:style='{"font-family":"Source Code Pro, monospace"}' >Your Name(Required)</label>
 
@@ -62,7 +61,7 @@ export default {
 }
 .contact{
     background-color: #000000;
-    height:100vh;
+    min-height:80vh;
     width:100%;
     display:flex;
     flex-direction: row;

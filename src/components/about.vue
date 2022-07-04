@@ -1,15 +1,16 @@
 <template>
     <div class="outer-about">
         <div class="second-home-about">
-            <div class="textbox">
-                <h4> About Me </h4>
+            <div class="textboxabout">
                 <div class="abouttext">
+                    <h4> About Me </h4>
                     Hey! I'm a web developer,
                     flutter developer
                     and a designer. I develop websites, web
                     applications & mobile apps. I am a self-taught developer with a passion for learning and problem
                     solving.
                 </div>
+                <img src="../assets/skills.svg" class="skillsimg">
             </div>
         </div>
     </div>
@@ -40,55 +41,61 @@ export default {
 }
 }
 </script>
-
-
 <style>
-
-
-
+.skillsimg{
+    width:500px;
+    height:500px;
+}
 .abouttext{
-    font-size: 1.8rem;
-    font-family: 'Roboto', sans-serif;
+    font-size: 1.4rem;
     font-weight: 300;
     text-align: center;
     margin-top: 2rem;
     width:50vw;
 
-
 }
-.textbox{
+.textbox {
+    font-size: 3rem;
+    font-family: 'Source Code Pro', monospace;
+    color: #f3ca20;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.textboxabout{
    font-size: 3rem;
-   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-   background-image: linear-gradient(to right, rgb(170, 102, 202),rgb(82, 136, 243), rgb(255, 234, 72));
-   background-size: 300%;
-   background-clip: text;
-   background-position: left;
-   color:transparent;
-   animation: change-bg 4s infinite alternate;
+   font-family: 'Source Code Pro', monospace;
+   color:#f3ca20;
+   flex-direction: row;
+   justify-content: center;
+    align-items: center;
+    display: flex;
 }
 .outer-about{
     background-color: #f3ca20 ;
     overflow: hidden;
-    height:100vh;
+    min-height:100vh;
     display:flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .second-home-about{
     margin-top:10vh;
-    height:75vh;
+    min-height:75vh;
     background-color:black ;
     width: 100%;
     display:flex;
     flex-direction: column;
 
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     transition: 1s;
     opacity: 0;
     transform: translateY(-150px);
-   
+    padding:15px;
 
 }
 .second-home-achieve {
@@ -105,6 +112,20 @@ export default {
     opacity: 0;
     transform: translateY(-150px);
 }
+.second-home-project {
+    margin-top: 10vh;
+    min-height: 90vh;
+    background-color: black;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: 1s;
+    opacity: 0;
+    transform: translateY(-150px);
+    padding:10px;
+}
 .second-home {
     margin-top: 10vh;
     height: 95vh;
@@ -118,7 +139,6 @@ export default {
     transition: 1s;
     opacity: 0;
     transform: translateY(-150px);
-
 
 }
 .animation{
