@@ -4,11 +4,13 @@
             <div class="textboxabout">
                 <div class="abouttext">
                     <h4> About Me </h4>
-                    Hey! I'm a web developer,
-                    flutter developer
-                    and a designer. I develop websites, web
-                    applications & mobile apps. I am a self-taught developer with a passion for learning and problem
-                    solving.
+                    Hey there! Glad to see you here. I'm a Pre Final year Electrical Undergraduate at Indian Institue Of
+                    Technology, Jodhpur. I love to explore different domains of computer science & have a keen interest
+                    in Web Technologies. I like to learn new stuff and always up for challenges!
+                    I am a self-taught programmer and I am always looking for new ways to improve myself.
+                    I am always ready to discuss interesting projects. Feel free to Contact me!
+                    I love sketching , designing , and coding :D
+
                 </div>
                 <img src="../assets/skills.svg" class="skillsimg">
             </div>
@@ -31,7 +33,7 @@ export default {
                 )
               }
               ,{
-                   threshold:0.5,
+                   threshold:0.0,
                 }
               );
               for(var i=0;i<cards.length;i++){
@@ -42,9 +44,21 @@ export default {
 }
 </script>
 <style>
+
+
+
+
+
+
+
+
+
+
 .skillsimg{
     width:500px;
     height:500px;
+    min-width:300px;
+    min-height:300px;
 }
 .abouttext{
     font-size: 1.4rem;
@@ -69,10 +83,12 @@ export default {
    font-family: 'Source Code Pro', monospace;
    color:#f3ca20;
    flex-direction: row;
-   justify-content: center;
-    align-items: center;
-    display: flex;
+   justify-content: space-around;
+   width:100%;
+   align-items: center;
+   display: flex;
 }
+
 .outer-about{
     background-color: #f3ca20 ;
     overflow: hidden;
@@ -126,6 +142,8 @@ export default {
     transform: translateY(-150px);
     padding:10px;
 }
+
+
 .second-home {
     margin-top: 10vh;
     height: 95vh;
@@ -141,6 +159,7 @@ export default {
     transform: translateY(-150px);
 
 }
+
 .animation{
    transform: translateY(0%);
    opacity: 1;
@@ -163,4 +182,5 @@ export default {
         opacity: 1;
     }
 }
+
 </style>

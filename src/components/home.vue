@@ -1,70 +1,151 @@
-<script>
-export default {
-  name: 'home',
 
-//   methods:{
-//      /* onMousemove(e) {
-//       this.x = e.clientX;
-//       document.getElementById('one').style.backgroundColor= 'hsl('+this.x+', 100%, 50%)';
-//       document.getElementById('two').style.backgroundColor= 'hsl('+this.x+', 100%, 50%)';
-//       document.getElementById('three').style.backgroundColor= 'hsl('+this.x+', 100%, 50%)';
-     
-//     },*/
-// }
-}
-</script>
 <template>
     <div class="outer-home">
-        <div class="homeoverlay">
-            <div class="hometext">
-                <h4> Hello ! I am Zaid</h4>
+        <div class="second-home-home">
+            <div class="textboxhome">
+                <div class="hometext">
+                    <h4> Hello ! I am Zaid Shamshad,
+                        Junior at IIT Jodhpur
+                    </h4>
                     <a href="../assets/Mohammad_Zaid_Shamshad_Resume__.pdf" download>
                         Resume
                     </a>
-                <div class="social-media">
-                    <div class="facebook">
-                        <fa :icon="['fab','linkedin']" />
-                    </div>
-                    <div class="instagram">
-                        <fa :icon="['fab','instagram']" />
-                    </div>
-                    <div class="twitter">
-                        <fa :icon="['fab','twitter']" />
-                    </div>
-                    <div class="github">
-                        <fa :icon="['fab','github']" />
+                    <div class="social-media-home">
+                        <div class="facebook-home">
+                            <fa :icon="['fab','linkedin']" />
+                        </div>
+                        <div class="instagram-home">
+                            <fa :icon="['fab','instagram']" />
+                        </div>
+                        <div class="twitter-home">
+                            <fa :icon="['fab','twitter']" />
+                        </div>
+                        <div class="github-home">
+                            <fa :icon="['fab','github']" />
+                        </div>
                     </div>
                 </div>
-
-            </div>
-            <div class="displaypic">
-            </div>
-
-        </div>
-
-        <div class="home">
-            <div @mousemove="onMousemove" class="home-div" id="one">
-            </div>
-            <div @mousemove="onMousemove" class="home-div" id="two">
-            </div>
-            <div @mousemove="onMousemove" class="home-div" id="three">
+                <img src="../assets/coderr.svg" class="home-img">
             </div>
         </div>
+
+        <!-- <div class="home">
+                <div @mousemove="onMousemove" class="home-div" id="one">
+                </div>
+                <div @mousemove="onMousemove" class="home-div" id="two">
+                </div>
+                <div @mousemove="onMousemove" class="home-div" id="three">
+                </div>
+            </div> -->
     </div>
 </template>
 
 <style>
-.hometext {
-    font-size:3rem;
-    color:#f3ca20;
-    font-family:'Source Code Pro',monospace;
-    text-align:center;
-    flex-direction:column;
-    justify-content:space-evenly;
+
+.second-home-home {
+    margin-top: 10vh;
+    min-height: 90vh;
+    background-color: black;
+    width: 100%;
     display: flex;
-    align-items:center;
-    height:50vh;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: 1s;
+    opacity: 0;
+    transform: translateY(-150px);
+    padding: 10px;
 }
+
+
+.hometext {
+    font-weight: 300;
+    text-align: center;
+    margin-top: 2rem;
+    width: 50vw;
+    color: #f3ca20;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    min-height:50vh;
+}
+
+
+.social-media-home{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 20vw;
+
+}
+
+.facebook-home {
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    color: #f3ca20;
+    width: 80px;
+   
+    background-color: black;
+    padding: 5px;
+    bottom: 0;
+    transition: all 0.25s ease-in-out;
+    transform: translateY(50%);
+}
+
+
+
+.github-home {
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    color: #f3ca20;
+    width: 80px;
+    background-color: black;
+
+    bottom: 0;
+    transition: all 0.25s ease-in-out;
+    transform: translateY(50%);
+   
+}
+
+
+.instagram-home {
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    color: #f3ca20;
+    width: 80px;
+  
+    background-color: black;
+
+    bottom: 0;
+    transition: all 0.25s ease-in-out;
+    transform: translateY(50%);
+    padding: 5px;
+}
+
+
+
+.twitter-home {
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    color: #f3ca20;
+    width: 80px;
+    background-color: black;
+    padding: 5px;
+    bottom: 0;
+    transition: all 0.25s ease-in-out;
+    transform: translateY(50%);
+    padding: 5px;
+}
+
+
+
+
 .hometext a{
     background-color:#f3ca20;
     color:black;
@@ -80,7 +161,6 @@ export default {
 }
 .hometext a:hover {
     background-color: #c0a124;
-  
 }
 .homeoverlay{
     position:absolute;
@@ -95,6 +175,13 @@ export default {
     flex-direction:row;
     justify-content:space-evenly;
     align-items:center;
+
+}
+.home-img{
+        width: 300px;
+        height: 300px;
+        min-height:200px;
+        min-width:200px;
 
 }
 .displaypic{
@@ -240,7 +327,7 @@ export default {
 
 
 .outer-home{
-    height:100vh;
+   min-height:100vh;
     display: block;
     background-color: #f3ca20 ;
     overflow: hidden;
@@ -290,6 +377,7 @@ justify-content: center;
     animation-fill-mode: forwards;
     
 }
+
 @media screen and (max-width: 450px) {
     #footer{
         height:10vh;
@@ -319,3 +407,39 @@ justify-content: center;
 }
 
 </style>
+<script>
+export default {
+  name: 'home',
+    mounted() {
+        this.observer();
+    },
+    methods: {
+        observer() {
+            const cards = document.getElementsByClassName("second-home-home");
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    entry.target.classList.toggle("animation", entry.isIntersecting);
+                }
+                )
+            }
+                , {
+                    threshold: 0.0,
+                }
+            );
+            for (var i = 0; i < cards.length; i++) {
+                observer.observe(cards[i]);
+            }
+        },
+    }
+
+//   methods:{
+//      /* onMousemove(e) {
+//       this.x = e.clientX;
+//       document.getElementById('one').style.backgroundColor= 'hsl('+this.x+', 100%, 50%)';
+//       document.getElementById('two').style.backgroundColor= 'hsl('+this.x+', 100%, 50%)';
+//       document.getElementById('three').style.backgroundColor= 'hsl('+this.x+', 100%, 50%)';
+     
+//     },*/
+// }
+}
+</script>

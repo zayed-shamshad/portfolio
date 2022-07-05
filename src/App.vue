@@ -128,7 +128,7 @@ goto(refName) {
   </div>
   <div id="pseudoNav">
     <div id="portfoliotext" @click="goto('home')" v-bind:style='{"cursor":"pointer"}'>
-      Portfolio
+      ZAID
     </div>
     <div id="navigation">
       <ul>
@@ -189,6 +189,18 @@ goto(refName) {
 
 </template>
 <style>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -308,6 +320,7 @@ goto(refName) {
   list-style: none;
   padding:20px;
   transition:all 0.25s ease-in-out;
+  cursor:pointer;
 }
 #pseudoNav ul li:hover{
   
@@ -404,8 +417,31 @@ html{
   right: 45px;
   font-size: 60px;
 }
+.outer-home {
+  background-color: #f3ca20;
+  overflow: hidden;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+}
 
+.textboxhome {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  align-items: center;
+  z-index: 10000;
+  font-size: 3rem;
+    font-family: 'Source Code Pro', monospace;
+    color: #f3ca20;
+}
 @media screen and (max-width: 700px) {
+  .skillsimg {
+      width: 280px;
+      height: 280px;
+    }
   .textboxabout {
     display: flex;
     flex-direction: column;
@@ -414,8 +450,24 @@ html{
     align-content: center;
 
   }
+    .textboxhome {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      align-content: center;
+  
+    }
+        .hometext {
+          font-size:2rem;
+        }
+        .abouttext{
+          font-size: 0.9rem;
+          width:90%;
+
+        }
 }
 @media screen and (max-height: 450px) {
+  
   .overlay a {font-size: 20px}
   .overlay .closebtn {
     font-size: 40px;
@@ -460,6 +512,5 @@ html{
                 }
 
 }
-  
 
 </style>
