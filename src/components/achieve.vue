@@ -6,7 +6,7 @@
             </div>
             <div class="exp-box">
                 <div class="exp-card">
-                    <img src="../assets/logo-dim.png" class="intern-card">
+                    <img src="logo-dim.png" class="intern-card">
                     <div> Worked as an intern at a IIT Jodhpur Ed-tech startup as a Web & Flutter Developer, where I
                         developed a signup-page for the mobile application, 
                         developed and integrated a whiteboard in the web app, 

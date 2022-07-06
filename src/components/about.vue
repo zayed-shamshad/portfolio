@@ -10,9 +10,8 @@
                     I am a self-taught programmer and I am always looking for new ways to improve myself.
                     I am always ready to discuss interesting projects. Feel free to Contact me!
                     I love sketching , designing , and coding :D
-
                 </div>
-                <img src="../assets/skills.svg" class="skillsimg">
+                <img src="skills.svg" class="skillsimg">
             </div>
         </div>
     </div>

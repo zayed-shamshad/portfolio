@@ -36,7 +36,7 @@
                         </div>
                     </div>
                 </div>
-                <img src="../assets/coderr.svg" class="home-img">
+                <img src="coderr.svg" class="home-img">
             </div>
         </div>
 
