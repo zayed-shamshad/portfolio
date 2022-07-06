@@ -82,10 +82,11 @@
     text-align: center;
     margin-top: 2rem;
     width: 50vw;
+    min-height:50vh;
     color: #f3ca20;
     display:flex;
     flex-direction:column;
-    justify-content:center;
+    justify-content:space-around;
     align-items:center;
     min-height:50vh;
 }
