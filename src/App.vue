@@ -172,17 +172,29 @@ goto(refName) {
       </div>
     </div>
     <div class="social-media">
+
       <div class="facebook">
-        <fa :icon="['fab','linkedin']" />
+        <a href="https://www.linkedin.com/in/mohammad-zaid-shamshad-611546203/" class="smha">
+          <fa :icon="['fab','linkedin']" />
+        </a>
       </div>
       <div class="instagram">
-        <fa :icon="['fab','instagram']" />
+        <a href="https://www.instagram.com/zaid_shamshad/" class="smha">
+          <fa :icon="['fab','instagram']" />
+        </a>
+
       </div>
       <div class="twitter">
-        <fa :icon="['fab','twitter']" />
+        <a href="https://www.twitter.com/Zaidshamshad2" class="smha">
+          <fa :icon="['fab','twitter']" />
+        </a>
+
       </div>
       <div class="github">
-        <fa :icon="['fab','github']" />
+        <a href="https://github.com/zayed-shamshad/" class="smha">
+          <fa :icon="['fab','github']" />
+        </a>
+
       </div>
     </div>
   </footer>

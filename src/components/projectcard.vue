@@ -17,10 +17,10 @@
             </ul>
         </div>
         <div class="linkscard">
-            <a :href="link_github">
+            <a :href="link_github" target="blank">
                 <fa :icon="['fab','github']" />Code
             </a>
-            <a :href="link_web">
+            <a :href="link_web" target="blank">
                 <fa :icon="['fa','arrow-up-right-from-square']" />Website
             </a>
         </div>
@@ -73,6 +73,7 @@
 
 
 
+
 .projectcard h4{
    color:#f3ca20;
     font-family:'Source Code Pro',monospace;
@@ -121,7 +122,7 @@
     justify-content: center;
     align-items: center;
     width: 300px;
-    height: 400px;
+    height: 450px;
     background-color: #000000;
     border-radius: 10px;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
@@ -129,7 +130,8 @@
 .container-projectcard {
     position: relative;
     width: 300px;
-    height:300px;
+    height:350px;
+    
 }
 
 .image-projectcard {
@@ -158,7 +160,7 @@
 
 .info-projectcard {
     color: #f3ca20;
-    font-size: 20px;
+    font-size: 16px;
     position: absolute;
     font-family:'Source Code Pro',monospace;
     top: 50%;
@@ -173,6 +175,8 @@
     text-align:center;
     align-items:center;
     padding:4px;
+    padding-top:40px;
+    overflow: scroll;
 
 }
 .linkscard{

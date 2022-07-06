@@ -6,8 +6,6 @@
             </div>
             <div class="exp-box">
                 <div class="exp-card">
-
-
                 </div>
                 <div class="exp-list">
                     <ul>
@@ -51,7 +49,6 @@ export default {
 }
 }
 </script>
-
 <style>
 .exp-box{
     width:100%;

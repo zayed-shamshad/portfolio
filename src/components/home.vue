@@ -7,21 +7,32 @@
                     <h4> Hello ! I am Zaid Shamshad,
                         Junior at IIT Jodhpur
                     </h4>
-                    <a href="../assets/Mohammad_Zaid_Shamshad_Resume__.pdf" download>
+                    <a href="../assets/Mohammad_Zaid_Shamshad_Resume__.pdf" download class="resumehome">
                         Resume
                     </a>
                     <div class="social-media-home">
-                        <div class="facebook-home">
-                            <fa :icon="['fab','linkedin']" />
+                        <div class="facebook-home noblue">
+                            <a href="https://www.linkedin.com/in/mohammad-zaid-shamshad-611546203/" class="smha">
+                                <fa :icon="['fab','linkedin']" />
+                            </a>
                         </div>
-                        <div class="instagram-home">
-                            <fa :icon="['fab','instagram']" />
+                        <div class="instagram-home ">
+                            <a href="https://www.instagram.com/zaid_shamshad/" class="smha">
+                                <fa :icon="['fab','instagram']" />
+                            </a>
+
                         </div>
                         <div class="twitter-home">
-                            <fa :icon="['fab','twitter']" />
+                            <a href="https://www.twitter.com/Zaidshamshad2" class="smha">
+                                <fa :icon="['fab','twitter']" />
+                            </a>
+
                         </div>
                         <div class="github-home">
-                            <fa :icon="['fab','github']" />
+                            <a href="https://github.com/zayed-shamshad/" class="smha">
+                                <fa :icon="['fab','github']" />
+                            </a>
+
                         </div>
                     </div>
                 </div>
@@ -42,6 +53,8 @@
 
 <style>
 
+
+
 .second-home-home {
     margin-top: 10vh;
     min-height: 90vh;
@@ -57,7 +70,13 @@
     padding: 10px;
 }
 
-
+.smha{
+    color:#f3ca20;
+    text-decoration:none;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
 .hometext {
     font-weight: 300;
     text-align: center;
@@ -78,6 +97,7 @@
         justify-content: space-around;
         align-items: center;
         width: 20vw;
+        color: #f3ca20;
 
 }
 
@@ -108,6 +128,7 @@
     bottom: 0;
     transition: all 0.25s ease-in-out;
     transform: translateY(50%);
+    padding: 5px;
    
 }
 
@@ -146,7 +167,7 @@
 
 
 
-.hometext a{
+.resumehome{
     background-color:#f3ca20;
     color:black;
     border:none;
@@ -159,7 +180,7 @@
     text-decoration: none;
     transition:all 0.2s ease-in-out;
 }
-.hometext a:hover {
+.resumehome:hover {
     background-color: #c0a124;
 }
 .homeoverlay{

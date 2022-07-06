@@ -6,7 +6,7 @@
     <div class="contact-form">
         <div v-bind:style='{"border-bottom" :"2px solid yellow","font-family":"Source Code Pro, monospace"}'><h1>Contact Me</h1>
         </div>
-        <form action="mailto:shamshad.1@iitj.ac.in" @submit.prevent="submit" @reset="onReset">
+        <form action="mailto:shamshad.1@iitj.ac.in" @reset="onReset">
                 <div class="form-field">
                     <label for="name" v-bind:style='{"font-family":"Source Code Pro, monospace"}' >Your Name(Required)</label>
 

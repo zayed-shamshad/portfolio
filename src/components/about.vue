@@ -100,7 +100,7 @@ export default {
 
 .second-home-about{
     margin-top:10vh;
-    min-height:75vh;
+    min-height:90vh;
     background-color:black ;
     width: 100%;
     display:flex;
